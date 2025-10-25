@@ -8,12 +8,12 @@ const Sidebar = () => {
   const { getUsers, users, selectedUser, setselectedUser, unseenMessages } =
     useContext(ChatContext);
   const { logout, onlineUsers } = useContext(AuthContext);
-  const [input, setInput] = useState(false);
+  const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   const filteredUsers = input
     ? users.filter((user) =>
-        user.fullName.toLoverCase().includes(input.toLowerCase())
+        user.fullName.toLowerCase().includes(input.toLowerCase())
       )
     : users;
 
@@ -55,11 +55,13 @@ const Sidebar = () => {
         {/*  Search */}
         <div className="bg-[#282142] rounded-full flex items-center gap-2 py-3 px-4 mt-5">
           <img src={assets.search_icon} className="w-3" />
-          <input
-            onChange={(e) => setInput(e.target.value)}
-            className="bg-transparent border-none outline-none text-white text-xs placeholder-[#c8c8c8] flex-1"
-            placeholder="Search User..."
-          />
+         <input
+  value={input}
+  onChange={(e) => setInput(e.target.value)}
+  className="bg-transparent border-none outline-none text-white text-xs placeholder-[#c8c8c8] flex-1"
+  placeholder="Search User..."
+/>
+
         </div>
       </div>
       
@@ -105,3 +107,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
