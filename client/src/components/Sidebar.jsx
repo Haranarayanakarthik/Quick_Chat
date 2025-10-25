@@ -85,11 +85,11 @@ const Sidebar = () => {
             />
             <div className="flex flex-col leading-5">
               <p>{user.fullName}</p>
-              {onlineUsers.includes(user._id) ? (
-                <span className="text-green-400 text-xs">Online</span>
-              ) : (
-                <span className="text-neutral-400 text-xs">Offline</span>
-              )}
+              {onlineUsers.includes(user._id.toString()) ? (
+  <span className="text-green-400 text-xs">Online</span>
+) : (
+  <span className="text-neutral-400 text-xs">Offline</span>
+)}
             </div>
             {unseenMessages[user._id] > 0 && (
               <p
@@ -107,4 +107,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
 
