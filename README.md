@@ -42,7 +42,7 @@ chat-app/
 └── README.md
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
-git clone
+git clone https://github.com/Haranarayanakarthik/Quick_Chat.git
 cd chat-app
 2️⃣ Install dependencies
 
@@ -57,11 +57,7 @@ cd server
 npm install
 3️⃣ Setup Environment Variables
 
-Create a .env file in the server folder:
-
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
+Create a .env file in the server folder:that has your database string 
 4️⃣ Run the application
 
 Start backend
