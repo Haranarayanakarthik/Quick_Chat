@@ -42,7 +42,7 @@ chat-app/
 └── README.md
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
-git clone https://github.com/your-username/chat-app.git
+git clone
 cd chat-app
 2️⃣ Install dependencies
 
